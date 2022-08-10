@@ -5,7 +5,16 @@ public class Main {
         miCoche.agregarPuertas();
         System.out.println(miCoche.puertas);
 
-        //Ejercicio 4
+        Persona persona = new Persona();
+        persona.setNombre("Maria");
+        persona.setApellido("Perez");
+        persona.setTelefono(345253);
+
+        System.out.println("Hola mi nombre completo es "
+                + persona.getNombre() + " " + persona.getApellido() +
+                " y mi numero de telefono es "+ persona.getTelefono());
+
+        //Ejercicio tema 4
         //IF
         int numeroIf = 0;
 
@@ -67,11 +76,43 @@ public class Main {
 
 }
 
-//Ejercicio 3
+//Ejercicio tema 3
 class Coche{
     int puertas = 0;
     public void agregarPuertas(){
         this.puertas++;
+    }
+}
+
+//Ejercicio tema 8
+
+class Persona{
+    private String nombre;
+    private String apellido;
+    private int telefono;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 }
 
