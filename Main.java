@@ -7,13 +7,30 @@ public class Main {
 
         Persona persona = new Persona();
         persona.setNombre("Maria");
-        persona.setApellido("Perez");
+        persona.setEdad(30);
         persona.setTelefono(345253);
 
         System.out.println("Hola mi nombre completo es "
-                + persona.getNombre() + " " + persona.getApellido() +
+                + persona.getNombre() + " ,mi edad  " + persona.getEdad() +
                 " y mi numero de telefono es "+ persona.getTelefono());
 
+        Cliente cliente = new Cliente();
+        cliente.setEdad(23);
+        cliente.setNombre("Claudia");
+        cliente.setTelefono(35692043);
+        cliente.setCredito("3456");
+
+        System.out.println("Hola soy " + cliente.getNombre() + " de " + cliente.getEdad() + " años de edad y mi telefono y credito disponible son " + cliente.getTelefono() + " " + cliente.getCredito());
+
+        Trabajador trabajador = new Trabajador();
+        trabajador.setEdad(45);
+        trabajador.setNombre("Carlos");
+        trabajador.setTelefono(32142563);
+        trabajador.setSalario(1000);
+        System.out.println("Nombre: " + trabajador.getNombre()
+        + " edad: " + trabajador.getEdad()
+        + " telefono: " + trabajador.getTelefono()
+        + " salario: " + trabajador.getSalario());
         //Ejercicio tema 4
         //IF
         int numeroIf = 0;
@@ -87,8 +104,8 @@ class Coche{
 //Ejercicio tema 8
 
 class Persona{
+    private int edad;
     private String nombre;
-    private String apellido;
     private int telefono;
 
     public void setNombre(String nombre) {
@@ -99,14 +116,12 @@ class Persona{
         return this.nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public int getEdad() {
+        return edad;
     }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
-
     public int getTelefono() {
         return telefono;
     }
@@ -116,6 +131,28 @@ class Persona{
     }
 }
 
+//Ejercicio tema 9
+class Cliente extends Persona {
+    public String credito;
 
+    public String getCredito() {
+        return credito;
+    }
+
+    public void setCredito(String credito) {
+        this.credito = credito;
+    }
+}
+
+class Trabajador extends Persona {
+    private int salario;
+
+    public int getSalario() {
+        return salario;
+    }
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+}
 
 
